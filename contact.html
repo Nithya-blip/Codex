@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Hello, World!</title>
+    <style>
+      :root { color-scheme: dark; } * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 2rem; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #f7f7ff; background: radial-gradient(circle at 10% 10%, #5140aa, transparent 35%), radial-gradient(circle at 90% 90%, #006d68, transparent 35%), #0b1020; }
+      main { width: min(90vw, 700px); padding: clamp(2rem, 6vw, 4.5rem); background: rgba(15, 20, 42, .7); border: 1px solid rgba(255,255,255,.18); border-radius: 28px; box-shadow: 0 24px 70px rgba(0,0,0,.38); backdrop-filter: blur(18px); }
+      nav { display: flex; justify-content: center; gap: 1.2rem; margin-bottom: 3rem; } nav a { color: #d9def4; text-decoration: none; font-size: .9rem; font-weight: 700; padding: .5rem .8rem; border-radius: 999px; } nav a:hover, nav a[aria-current="page"] { background: rgba(255,255,255,.12); color: #66f2d8; }
+      p.label { margin: 0 0 1rem; color: #66f2d8; font-size: .88rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; } h1 { margin: 0; font-size: clamp(2.8rem, 8vw, 5rem); letter-spacing: -.06em; } .copy { color: #d9def4; font-size: 1.1rem; line-height: 1.75; } .button { display: inline-block; margin-top: .8rem; padding: .85rem 1.2rem; border-radius: 999px; color: #081316; background: #66f2d8; text-decoration: none; font-weight: 800; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav aria-label="Main navigation"><a href="hello-world.html">Home</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a></nav>
+      <p class="label">Say hello</p>
+      <h1>Let's make something great.</h1>
+      <p class="copy">Have an idea, a question, or simply want to connect? I would love to hear from you.</p>
+      <a class="button" href="mailto:hello@example.com">Email me ↗</a>
+    </main>
+  </body>
+</html>
