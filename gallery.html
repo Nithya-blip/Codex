@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Hello, World!</title>
+    <style>
+      :root { color-scheme: dark; } * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; padding: 2rem; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #f7f7ff; background: radial-gradient(circle at 5% 5%, #5140aa, transparent 30%), radial-gradient(circle at 95% 95%, #006d68, transparent 30%), #0b1020; }
+      main { width: min(100%, 1000px); margin: 0 auto; padding: clamp(1.5rem, 4vw, 3rem); background: rgba(15,20,42,.7); border: 1px solid rgba(255,255,255,.18); border-radius: 28px; box-shadow: 0 24px 70px rgba(0,0,0,.38); backdrop-filter: blur(18px); }
+      nav { display: flex; justify-content: center; flex-wrap: wrap; gap: .6rem; margin-bottom: 3rem; } nav a { color: #d9def4; text-decoration: none; font-size: .9rem; font-weight: 700; padding: .5rem .8rem; border-radius: 999px; } nav a:hover, nav a[aria-current="page"] { background: rgba(255,255,255,.12); color: #66f2d8; }
+      .intro { text-align: center; margin-bottom: 2.2rem; } .label { margin: 0 0 .8rem; color: #66f2d8; font-size: .85rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; } h1 { margin: 0; font-size: clamp(2.8rem, 8vw, 5rem); letter-spacing: -.06em; } .intro p:last-child { margin: 1rem auto 0; max-width: 35rem; color: #d9def4; line-height: 1.6; }
+      .grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 150px; gap: 1rem; } .card { position: relative; overflow: hidden; border-radius: 18px; min-height: 150px; background: linear-gradient(135deg, var(--a), var(--b)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.13); transition: transform .25s ease, box-shadow .25s ease; } .card:hover { transform: translateY(-5px); box-shadow: inset 0 0 0 1px rgba(255,255,255,.26), 0 15px 30px rgba(0,0,0,.25); } .card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.28), transparent 45%); } .card span { position: absolute; z-index: 1; left: 1rem; bottom: .8rem; font-weight: 800; font-size: 1.1rem; text-shadow: 0 1px 12px rgba(0,0,0,.5); } .wide { grid-column: span 7; } .tall { grid-column: span 5; grid-row: span 2; } .half { grid-column: span 4; } @media (max-width: 650px) { body { padding: 1rem; } .grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 130px; } .wide, .tall, .half { grid-column: span 1; grid-row: span 1; } .wide { grid-column: span 2; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="gallery.html" aria-current="page">Gallery</a><a href="contact.html">Contact</a></nav>
+      <section class="intro"><p class="label">A collection of ideas</p><h1>Color in motion.</h1><p>A visual playground built from simple gradients, texture, and a little imagination.</p></section>
+      <section class="grid" aria-label="Gallery collection">
+        <div class="card wide" style="--a:#7e5cff;--b:#3d1f7b"><span>Midnight Bloom</span></div>
+        <div class="card tall" style="--a:#00bfae;--b:#075767"><span>Tidal Light</span></div>
+        <div class="card half" style="--a:#ff8a65;--b:#c13c79"><span>Daybreak</span></div>
+        <div class="card half" style="--a:#ffcf4a;--b:#e2543b"><span>Golden Hour</span></div>
+        <div class="card half" style="--a:#2387ca;--b:#143c78"><span>Blue Note</span></div>
+        <div class="card wide" style="--a:#e65caa;--b:#5c3fd0"><span>Soft Signal</span></div>
+      </section>
+    </main>
+  </body>
+</html>
